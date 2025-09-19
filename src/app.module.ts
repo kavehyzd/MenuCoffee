@@ -15,8 +15,7 @@ import { CategoriesModule } from './categories/categories.module';
       inject: [ConfigService],
       useFactory: async (configService: ConfigService) => ({
         uri: configService.get<string>('MONGO_URI'),
-        catch: console.log(configService.get<string>('MONGO_URI'))
-      
+
       }),
     }),
 

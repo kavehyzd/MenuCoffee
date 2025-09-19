@@ -11,7 +11,6 @@ export class Category {
   @Prop({ default: true })
   active: boolean;
 
-  // فقط مسیر عکس رو ذخیره می‌کنیم (مثلاً /uploads/categories/xxx.png)
   @Prop()
   image: string;
 
