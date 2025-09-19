@@ -47,6 +47,10 @@ export class CategoriesController {
   async findAll() {
     return this.categoriesService.findAll();
   }
+    @Get('tree')
+  async getTree() {
+    return this.categoriesService.getCategoryTree(3); // 3 سطح
+  }
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
@@ -85,4 +89,5 @@ export class CategoriesController {
   async remove(@Param('id') id: string) {
     return this.categoriesService.remove(id);
   }
+
 }
